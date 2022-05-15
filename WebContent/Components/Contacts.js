@@ -60,14 +60,14 @@ function onItemSaveComplete(response, status) {
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event) {
 	$("#hidItemIDSave").val($(this).data("itemid"));
-	$("#accountNo").val($(this).closest("tr").find('td:eq(0)').text());
-	$("#fname").val($(this).closest("tr").find('td:eq(1)').text());
-	$("#gender").val($(this).closest("tr").find('td:eq(2)').text());
-	$("#nic").val($(this).closest("tr").find('td:eq(3)').text());
-	$("#number").val($(this).closest("tr").find('td:eq(4)').text());
-	$("#email").val($(this).closest("tr").find('td:eq(5)').text());
-	$("#password").val($(this).closest("tr").find('td:eq(6)').text());
-	$("#address").val($(this).closest("tr").find('td:eq(7)').text());
+	$("#DistrictCode").val($(this).closest("tr").find('td:eq(0)').text());
+	$("#Description").val($(this).closest("tr").find('td:eq(1)').text());
+	$("#ComplainNo").val($(this).closest("tr").find('td:eq(2)').text());
+	$("#CustomerServiceNo").val($(this).closest("tr").find('td:eq(3)').text());
+	$("#NewConnectionsNo").val($(this).closest("tr").find('td:eq(4)').text());
+	$("#EmergencyNo").val($(this).closest("tr").find('td:eq(5)').text());
+	$("#Address").val($(this).closest("tr").find('td:eq(6)').text());
+
 });
 
 
@@ -117,36 +117,33 @@ function onItemDeleteComplete(response, status) {
 // CLIENT-MODEL================================================================
 function validateItemForm() {
 	// accountNo
-	if ($("#accountNo").val().trim() == "") {
-		return "Insert Item Code.";
+	if ($("#DistrictCode").val().trim() == "") {
+		return "Insert accountNo.";
 	}
 	// NAME
-	if ($("#fname").val().trim() == "") {
-		return "Insert Item Name.";
+	if ($("#Description").val().trim() == "") {
+		return "Insert Description.";
 	}
 	// PRICE-------------------------------
-	if ($("#gender").val().trim() == "") {
-		return "Insert Item Price.";
+	if ($("#ComplainNo").val().trim() == "") {
+		return "Insert ComplainNo.";
 	}
 
 	// DESCRIPTION------------------------
-	if ($("#nic").val().trim() == "") {
-		return "Insert Item Description.";
+	if ($("#CustomerServiceNo").val().trim() == "") {
+		return "Insert CustomerServiceNo.";
 	}
 	
-		if ($("#number").val().trim() == "") {
-		return "Insert Item Price.";
+		if ($("#NewConnectionsNo").val().trim() == "") {
+		return "Insert New ConnectionNo.";
 	}
 	
-		if ($("#email").val().trim() == "") {
+		if ($("#EmergencyNo ").val().trim() == "") {
 		return "Insert Item Price.";
 	}
-		if ($("#password").val().trim() == "") {
-		return "Insert Item Price.";
+		if ($("#Address").val().trim() == "") {
+		return "Insert Address.";
 	}
 	
-		if ($("#address").val().trim() == "") {
-		return "Insert Item Price.";
-	}
 	return true;
 }
