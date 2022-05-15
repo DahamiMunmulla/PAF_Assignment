@@ -75,6 +75,8 @@ public class ApplicationAPI extends HttpServlet {
 		return map;
 	}
 
+	
+	
 	/**
 	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
 	 */
